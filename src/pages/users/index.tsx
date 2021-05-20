@@ -11,7 +11,8 @@ import {
   Checkbox, 
   Tbody, 
   Td, 
-  Text 
+  Text, 
+  useBreakpointValue
 } from "@chakra-ui/react";
 
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
@@ -21,6 +22,11 @@ import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
+  const isMediumVersion = useBreakpointValue({
+    base: false,
+    md: true
+  });
+
   return (
     <Box>
       <Header />
@@ -28,8 +34,8 @@ export default function UserList() {
       <Flex w="100%" my="6" maxW={1480} mx="auto" px="6">
         <Sidebar />
 
-        <Box flex="1" borderRadius={8} bg="gray.800" p="8">
-          <Flex mb="8" justify="space-between" align="center">
+        <Box flex="1" borderRadius={8} bg="gray.800" p="8" w="100%">
+          <Flex mb="8" justify="space-between" align={['flex-start', "center"]} direction={['column', 'row']}>
             <Heading size="lg" fontWeight="normal">Usuários</Heading>
 
             <Button 
@@ -37,20 +43,21 @@ export default function UserList() {
               size="sm"
               fontSize="sm"
               colorScheme="pink"
+              mt={['3', null]}
               leftIcon={<Icon as={RiAddLine} fontSize="20" />}
             >
               Criar novo
             </Button>
           </Flex>
 
-          <Table colorScheme="whiteAlpha">
+          <Table colorScheme="whiteAlpha" overflowX={['auto', 'auto', null]} display={['block', 'block', 'table']}>
             <Thead>
               <Tr>
                 <Th px="6" color="gray.300" w="8">
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>Usuários</Th>
-                <Th>Data de cadastro</Th>
+                { isMediumVersion && <Th>Data de cadastro</Th> } 
                 <Th w="8"></Th>
               </Tr>
             </Thead>
@@ -66,7 +73,7 @@ export default function UserList() {
                     <Text fontStyle="sm" color="gray.300">alexandre.monteiro.bec@gmail.com</Text>
                   </Box>
                 </Td>
-                <Td>04 de Abril, 2021</Td>
+                { isMediumVersion && <Td>04 de Abril, 2021</Td> } 
                 <Td>
                   <Button 
                     as="a"
@@ -90,7 +97,7 @@ export default function UserList() {
                     <Text fontStyle="sm" color="gray.300">alexandre.monteiro.bec@gmail.com</Text>
                   </Box>
                 </Td>
-                <Td>04 de Abril, 2021</Td>
+                { isMediumVersion && <Td>04 de Abril, 2021</Td> } 
                 <Td>
                   <Button 
                     as="a"
@@ -114,7 +121,7 @@ export default function UserList() {
                     <Text fontStyle="sm" color="gray.300">alexandre.monteiro.bec@gmail.com</Text>
                   </Box>
                 </Td>
-                <Td>04 de Abril, 2021</Td>
+                { isMediumVersion && <Td>04 de Abril, 2021</Td> } 
                 <Td>
                   <Button 
                     as="a"
