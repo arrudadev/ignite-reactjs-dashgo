@@ -25,7 +25,7 @@ export function Header() {
       h="20"
       mx="auto"
       mt="4"
-      px="6"
+      px={["3", "6"]}
       align="center"
     >
       { !isWideVersion && (
