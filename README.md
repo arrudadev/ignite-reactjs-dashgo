@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Dashgo logo" title="Dashgo logo" src="https://raw.githubusercontent.com/monteiro-alexandre/ignite-reactjs-dashgo/master/.github/assets/logo.svg" width="220px" />
+    <img alt="Dashgo logo" title="Dashgo logo" src="https://raw.githubusercontent.com/monteiro-alexandre/ignite-reactjs-dashgo/master/.github/assets/logo.png" width="220px" />
 </h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
@@ -14,7 +14,6 @@ In this module, an administrative panel interface was created, containing authen
 # :pushpin: Table of Contents
 
 * [Technologies](#-technologies)
-* [Layout](#-layout)
 * [Installation](#construction_worker-installation)
 * [Getting Started](#runner-getting-started)
 * [Found a bug? Missing a specific feature?](#bug-issues)
